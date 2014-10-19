@@ -14,6 +14,8 @@
 		B7EFAC7019F3C93D00EDF627 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7EFAC6F19F3C93D00EDF627 /* Images.xcassets */; };
 		B7EFAC7319F3C93D00EDF627 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7EFAC7119F3C93D00EDF627 /* LaunchScreen.xib */; };
 		B7EFAC7F19F3C93D00EDF627 /* QR_GeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFAC7E19F3C93D00EDF627 /* QR_GeneratorTests.m */; };
+		B7EFAC8A19F3CE5000EDF627 /* QRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B7EFAC8919F3CE5000EDF627 /* QRImage.m */; };
+		B7EFAC8C19F3CEBB00EDF627 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EFAC8B19F3CEBB00EDF627 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		B7EFAC7819F3C93D00EDF627 /* QR GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QR GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EFAC7D19F3C93D00EDF627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7EFAC7E19F3C93D00EDF627 /* QR_GeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QR_GeneratorTests.m; sourceTree = "<group>"; };
+		B7EFAC8819F3CE5000EDF627 /* QRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRImage.h; sourceTree = "<group>"; };
+		B7EFAC8919F3CE5000EDF627 /* QRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRImage.m; sourceTree = "<group>"; };
+		B7EFAC8B19F3CEBB00EDF627 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7EFAC8C19F3CEBB00EDF627 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		B7EFAC5619F3C93D00EDF627 = {
 			isa = PBXGroup;
 			children = (
+				B7EFAC8D19F3CECC00EDF627 /* Frameworks */,
 				B7EFAC6119F3C93D00EDF627 /* QR Generator */,
 				B7EFAC7B19F3C93D00EDF627 /* QR GeneratorTests */,
 				B7EFAC6019F3C93D00EDF627 /* Products */,
@@ -89,6 +96,8 @@
 				B7EFAC6F19F3C93D00EDF627 /* Images.xcassets */,
 				B7EFAC7119F3C93D00EDF627 /* LaunchScreen.xib */,
 				B7EFAC6219F3C93D00EDF627 /* Supporting Files */,
+				B7EFAC8819F3CE5000EDF627 /* QRImage.h */,
+				B7EFAC8919F3CE5000EDF627 /* QRImage.m */,
 			);
 			path = "QR Generator";
 			sourceTree = "<group>";
@@ -117,6 +126,14 @@
 				B7EFAC7D19F3C93D00EDF627 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7EFAC8D19F3CECC00EDF627 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7EFAC8B19F3CEBB00EDF627 /* CoreImage.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +238,7 @@
 			files = (
 				B7EFAC6B19F3C93D00EDF627 /* ViewController.m in Sources */,
 				B7EFAC6819F3C93D00EDF627 /* AppDelegate.m in Sources */,
+				B7EFAC8A19F3CE5000EDF627 /* QRImage.m in Sources */,
 				B7EFAC6519F3C93D00EDF627 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "QR Generator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "QR Generator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
