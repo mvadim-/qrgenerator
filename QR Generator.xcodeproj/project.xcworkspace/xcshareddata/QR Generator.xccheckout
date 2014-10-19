@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>31B15945-9502-4324-A6C0-43CB12352E12</string>
+	<key>IDESourceControlProjectName</key>
+	<string>QR Generator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E42C536C0B23A53958A3BF82E9D1B78A093AA172</key>
+		<string>https://github.com/mvadim-/qrgenerator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>QR Generator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E42C536C0B23A53958A3BF82E9D1B78A093AA172</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mvadim-/qrgenerator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E42C536C0B23A53958A3BF82E9D1B78A093AA172</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E42C536C0B23A53958A3BF82E9D1B78A093AA172</string>
+			<key>IDESourceControlWCCName</key>
+			<string>QR%20Generator</string>
+		</dict>
+	</array>
+</dict>
+</plist>
