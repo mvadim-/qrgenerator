@@ -23,7 +23,7 @@
     self = [super init];
     if (self)
     {
-        [self createNonInterpolatedUIImageFromCIImage:[self createQRForString:str] withScale:20.0];
+        [self createNonInterpolatedUIImageFromCIImage:[self createQRForString:str] withScale:10.0];
     }
     return self;
 }
@@ -31,13 +31,13 @@
 - (CIImage *)createQRForString:(NSString *)qrString
 {
     // Need to convert the string to a UTF-8 encoded NSData object
-    NSData *stringData = [qrString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *stringData = [qrString dataUsingEncoding:NSASCIIStringEncoding];
     
     // Create the filter
     CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     // Set the message content and error-correction level
     [qrFilter setValue:stringData forKey:@"inputMessage"];
-    [qrFilter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    [qrFilter setValue:@"L" forKey:@"inputCorrectionLevel"];
     
     // Send the image back
     return qrFilter.outputImage;
@@ -59,7 +59,16 @@
     // Tidy up
     UIGraphicsEndImageContext();
     CGImageRelease(cgImage);
-    self.image = scaledImage;
+    self.image = [self flipImage:scaledImage];
+}
+
+- (UIImage *)flipImage:(UIImage *)image
+{
+    UIGraphicsBeginImageContext(image.size);
+    CGContextDrawImage(UIGraphicsGetCurrentContext(),CGRectMake(0.,0., image.size.width, image.size.height),image.CGImage);
+    UIImage *i = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return i;
 }
 
 @end
